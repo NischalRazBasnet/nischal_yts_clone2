@@ -1,0 +1,266 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Arimo", Arial, Helvetica, sans-serif;
+}
+
+section {
+  height: auto;
+  width: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(35 35, 35, 0.9),
+      rgba(0, 0, 0, 0)
+    ),
+    url(../images/background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+section nav {
+  width: 100%;
+  height: auto;
+  background-color: rgb(29, 29, 29);
+  border-bottom: 1px solid rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+section nav .left_container {
+  margin-left: 70px;
+  padding: 0.3em;
+}
+
+section nav .left_container span {
+  color: rgb(145, 145, 145);
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+section nav .right_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+}
+
+section nav .right_container .search_field {
+  width: 250px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 8px 15px;
+  border: 1.5px solid rgb(51, 51, 51);
+}
+
+section nav .right_container .search_field i {
+  color: rgb(145, 145, 145);
+  margin: 8px;
+}
+
+section nav .right_container .search_field input {
+  width: 80%;
+  padding: 5px 0;
+  color: rgb(145, 145, 145);
+  background-color: rgb(29, 29, 29);
+  border: none;
+  overflow: auto;
+  outline: none;
+}
+
+section nav .right_container .nav_links a {
+  color: rgb(145, 145, 145);
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 13.6px;
+  font-weight: 600;
+}
+
+section nav .right_container .nav_links .active {
+  color: rgb(106, 192, 69);
+}
+
+section nav .right_container .signup a {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13.6px;
+  font-weight: 600;
+}
+
+section nav .right_container .signup span {
+  color: rgb(145, 145, 145);
+}
+
+section .landing {
+  text-align: center;
+  margin-top: 40px;
+}
+
+section .landing h1 {
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  margin: 0 0 15px;
+}
+
+section .landing p {
+  color: rgb(204, 204, 204);
+  font-size: 15px;
+  line-height: 1.1em;
+}
+
+section .landing a {
+  text-decoration: none;
+  color: rgb(66, 139, 202);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.2em;
+}
+
+section .landing .sharing a {
+  font-size: 16px;
+}
+
+.landing a:hover {
+  color: rgb(20, 70, 120);
+}
+
+section .landing .sharing i {
+  color: rgb(66, 139, 202);
+  line-height: 1.2em;
+}
+
+section .landing .sharing span {
+  color: rgb(255, 255, 255);
+}
+
+section .landing .popular_featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+  padding-bottom: 10px;
+}
+
+section .landing .popular_featured .popular_downloads {
+  display: flex;
+  align-items: center;
+  transform: translate(-50px);
+}
+
+section .landing .popular_featured .popular_downloads i {
+  color: rgb(106, 192, 69);
+  margin: 0 8px;
+}
+
+section .landing .popular_featured .popular_downloads p {
+  font-size: 18.4px;
+  font-weight: 600;
+}
+
+section .landing .popular_featured .most_featured {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 390px;
+}
+
+section .landing .popular_featured .most_featured p {
+  font-size: 18.4px;
+  color: rgb(66, 139, 202);
+  font-weight: 600;
+}
+
+section .landing .popular_featured .most_featured p:hover {
+  color: rgb(20, 70, 120);
+  cursor: pointer;
+}
+
+section .landing hr {
+  width: 70%;
+  height: 1px;
+  background-color: rgb(145, 145, 145);
+  border: 0;
+  margin-left: 15%;
+}
+
+section .movies_box {
+  width: 70%;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section .movies_box .movie_cards {
+  width: 250px;
+  height: 390px;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+section .movies_box .movie_cards img {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+section .movies_box .movie_cards #movie_title {
+  position: relative;
+  left: 8px;
+  font-size: 16px;
+  top: 390px;
+  color: rgb(255, 255, 255);
+}
+
+.movie_detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.movie_detail a {
+  width: 130px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(106, 192, 69);
+  background-color: rgb(106, 192, 69);
+  border-radius: 3px;
+}
+
+.movie_detail i {
+  color: rgb(106, 192, 69);
+}
+
+.movie_detail p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  font-size: 16.5px;
+  font-weight: 600;
+}
+
+.movie_cards:hover .movie_detail {
+  opacity: 1;
+  transform: translateY(0);
+  background: rgba(0, 0, 0, 0.4);
+}
