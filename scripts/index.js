@@ -10,6 +10,8 @@ async function fetchhMovies(searchQuery = "") {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const movieData = await response.json();
+    console.log(movieData, "search");
+    displayMovies(movieData.data.movies);
     return movieData.data.movies;
   } catch (error) {
     console.error(error);
@@ -17,7 +19,19 @@ async function fetchhMovies(searchQuery = "") {
   }
 }
 
+function searchMovies() {
+  const searchInput = document.getElementById("quick_search").value;
+  console.log(searchInput);
+  fetchhMovies(searchInput);
+}
+
+function movieDetail(movieId = "") {
+  window.location.href = `detail.html?movie_id=${movieId}`;
+  console.log(movieId);
+}
+
 function showMovies(movies) {
+  console.log(movies, "movie");
   return movies.map(
     (movie) => `
     <div class="movie_cards">
@@ -25,9 +39,11 @@ function showMovies(movies) {
           <div id="movie_title">${movie.title}</div>
           <div class="movie_detail">
             <i class="fa-solid fa-star"></i>
-            <p calss="rating">${movie.rating}/10</p>
+            <p class="rating">${movie.rating}/10</p>
             <p class="category">${movie.genres.join(",")}</p>
-            <a href="view.html" class="btn_view">View Details</a>
+            <button class="view_details" id="details" onclick="movieDetail(${
+              movie.id
+            })">View Details</button>
           </div>
         </div>`
   );
