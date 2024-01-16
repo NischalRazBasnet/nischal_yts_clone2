@@ -25,7 +25,7 @@ function displayMovieDetails(movie) {
         <div id="movie_title">${movie.title}</div>
         <div class="details">
           <p class="year">${movie.year}</p>
-          <p class="category">${movie.genres.join(",")}</p>
+          <p class="category">${movie.genres.join(" / ")}</p>
           <p class="available">Available in:</p>
           <button class="subtitle">Download Subtitles</button>
           <div class="row">
@@ -41,8 +41,9 @@ function displayMovieDetails(movie) {
               <img src="images/imdb.svg" />
             </div>
             <div class="col-xs-1 col-md-1">
-              <p class="rating">${movie.rating}/10</p>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"><p class="rating">${
+                movie.rating
+              }/10</p></i>
             </div>
           </div>
         </div>
@@ -51,7 +52,15 @@ function displayMovieDetails(movie) {
         <button class="download_btn">Download</button>
         <button class="watch_btn">Watch Now</button>
       </div>
-    </div>`;
+    </div>
+    <div class="summary_container">
+          <h1>Plot Summary</h1>
+          <p class="description">${movie.description_full}</p>
+          <div class="upload_detail">
+            <p>Uploaded by:${movie.date_uploaded_unix}</p>
+            <p>${movie.date_uploaded}</p>
+          </div>
+        </div>`;
 }
 
 function getMovieId() {
